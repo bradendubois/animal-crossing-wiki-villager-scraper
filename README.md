@@ -1,4 +1,6 @@
-# animal-crossing-wiki-villager-scraper
+# animal-crossing-wiki-villager-scraper 
+
+[![Python](https://img.shields.io/badge/Python-3.8.2-blue?style=for-the-badge)](https://www.python.org/)
 
 A web scraper for Animal Crossing: New Horizons villagers, scraping from [animalcrossing.fandom.com](https://animalcrossing.fandom.com).
 
@@ -32,10 +34,6 @@ python main_scraper.py
 
 ### Accessing Data
 
-<div style="display: inline; flex-direction: row;">
-
-<div>
-
 A directory ``villager-data`` is created in the root of the project, which will contain a file ``villager-data.json``, 
 holding all the JSON data for the villagers. A subdirectory, ``images``, will be created in ``villager-data``, holding 
 an image for each villager.
@@ -43,18 +41,11 @@ an image for each villager.
 ![Directory](readme-images/directory.png)
 
 The JSON data will have a villager's name as a key, and its data will include all attributes available on its 
-respective wiki page. For example, [Zucker](https://animalcrossing.fandom.com/wiki/Zucker)'s page, showing the following 
-will be formatted as follows:
-
-</div>
-
-<div>
+respective wiki page. For example, [Zucker](https://animalcrossing.fandom.com/wiki/Zucker)'s page is formatted as follows:
 
 ![Zucker's Villager Page](readme-images/villager_example.png "Zucker's Wiki page")
 
-</div>
-
-</div>
+So, Zucker's data will be formatted as follows:
 
 ```json
 "Zucker": {
