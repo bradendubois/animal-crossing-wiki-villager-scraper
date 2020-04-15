@@ -31,7 +31,7 @@ def get_villager_list():
         print("Uh-oh, couldn't locate the table.\n\n" +
               "Maybe the wiki has changed, and broken this scraper.\n" +
               "In any case, please make an issue and I'll try to fix it!")
-        exit(0)
+        return None
 
     # Only add each link once
     links = []
@@ -43,3 +43,5 @@ def get_villager_list():
                 l = link.get("href")
                 if l not in links:
                     links.append(l)
+
+    return links
