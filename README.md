@@ -40,7 +40,7 @@ A directory ``villager-data`` is created in the root of the project, which will 
 holding all the JSON data for the villagers. A subdirectory, ``images``, will be created in ``villager-data``, holding 
 an image for each villager.
 
-![Directory](directory.png)
+![Directory](readme-images/directory.png)
 
 The JSON data will have a villager's name as a key, and its data will include all attributes available on its 
 respective wiki page. For example, [Zucker](https://animalcrossing.fandom.com/wiki/Zucker)'s page, showing the following 
@@ -50,7 +50,7 @@ will be formatted as follows:
 
 <div>
 
-![Zucker's Villager Page](villager_example.png "Zucker's Wiki page")
+![Zucker's Villager Page](readme-images/villager_example.png "Zucker's Wiki page")
 
 </div>
 
