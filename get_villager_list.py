@@ -3,11 +3,16 @@ from bs4 import BeautifulSoup
 
 
 def get_villager_list():
+    """
+    Gets the list of all villagers from a <table> on the Animal Crossing Fandom wiki
+    :return: A list of all villages, ["/wiki/Admiral", ...]
+    """
+
     # The URL of the Animal Crossing Wiki
-    wiki_url = "https://animalcrossing.fandom.com"
+    wiki_url = "https://animalcrossing.fandom.com/wiki/Villager_list_(New_Horizons)"
 
     # Get the page and parse it with BeautifulSoup
-    response = get(wiki_url + "/wiki/Villager_list_(New_Horizons)")
+    response = get(wiki_url)
     soup_response = BeautifulSoup(response.text, 'html.parser')
 
     # Try to locate the specific table containing all the villagers
@@ -23,15 +28,8 @@ def get_villager_list():
                 villager_table = table
                 found = True
                 break
-            if found:
-                break
-
-    # Couldn't locate the table
-    if len(villager_table) == 0:
-        print("Uh-oh, couldn't locate the table.\n\n" +
-              "Maybe the wiki has changed, and broken this scraper.\n" +
-              "In any case, please make an issue and I'll try to fix it!")
-        return None
+        if found:
+            break
 
     # Only add each link once
     links = []
